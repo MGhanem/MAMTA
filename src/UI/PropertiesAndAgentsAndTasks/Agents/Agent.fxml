@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="11.0" layoutY="6.0" text="Number Of Agents:" />
+      <TextField layoutX="137.0" layoutY="2.0" prefHeight="25.0" prefWidth="72.0" />
+      <RadioButton layoutX="139.0" layoutY="38.0" mnemonicParsing="false" text="All Agents are Hemogenious" AnchorPane.topAnchor="38.0" />
+      <RadioButton layoutX="139.0" layoutY="63.0" mnemonicParsing="false" text="Groups of Hemogenious Agents" AnchorPane.topAnchor="63.0" />
+      <RadioButton layoutX="139.0" layoutY="88.0" mnemonicParsing="false" text="All Agents are Heterogeneous" AnchorPane.topAnchor="88.0" />
+      <Button layoutX="331.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Save" AnchorPane.topAnchor="115.0" />
+      <Label layoutX="16.0" layoutY="63.0" text="Hemogenity Type:" />
+      <Separator layoutX="19.0" layoutY="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0" />
+      <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="166.0" />
+   </children>
+</AnchorPane>

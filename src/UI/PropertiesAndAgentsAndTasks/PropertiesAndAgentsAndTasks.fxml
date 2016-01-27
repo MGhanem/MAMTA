@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ALL" focusTraversable="true" prefHeight="160.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.PropertiesAndAgentsAndTasks.PropertiesAndAgentsAndTasksController">
+    <stylesheets>
+        <URL value="@PropertiesAndAgentsAndTasks.css" />
+    </stylesheets>
+    <children>
+      <SplitPane fx:id="SP" dividerPositions="0.1" style="-fx-background-color: LIGHTGRAY;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <AnchorPane fx:id="LeftPart" style="-fx-background-color: gray;">
+               <children>
+                  <ToolBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <Button mnemonicParsing="false" onMouseClicked="#hideLeftPart" prefHeight="20.0" text="[-]" />
+                    </items>
+                  </ToolBar>
+                  <Accordion AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="31.0">
+                    <panes>
+                      <TitledPane text="Property">
+                        <content>
+                          <AnchorPane>
+                                 <children>
+                                          <fx:include source="Properties/Property.fxml" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane text="Agents">
+                        <content>
+                          <AnchorPane>
+                                 <children>
+                                          <fx:include source="Agents/Agent.fxml" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane text="Tasks">
+                        <content>
+                          <AnchorPane />
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="RightPart" focusTraversable="true" style="-fx-background-color: gray;">
+               <children>
+                  <ToolBar nodeOrientation="LEFT_TO_RIGHT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <Button mnemonicParsing="false" onMouseClicked="#hideRightPart" prefHeight="20.0" text="[-]" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="20.0" text="P Tree" translateX="5.0" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="20.0" text="A Tree" translateX="10.0" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="20.0" text="T Tree" translateX="15.0" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="20.0" text="All" translateX="20.0" />
+                    </items>
+                  </ToolBar>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="31.0">
+                    <content>
+                      <AnchorPane style="-fx-background-color: gray;">
+                           <children>
+                              <AnchorPane style="-fx-background-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ToolBar fx:id="LTB" orientation="VERTICAL" prefHeight="160.0" prefWidth="30.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="Images/info.png" />
+               </image>
+            </ImageView>
+        </items>
+      </ToolBar>
+      <ToolBar fx:id="RTB" orientation="VERTICAL" prefHeight="160.0" prefWidth="30.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+         </items>
+      </ToolBar>
+    </children>
+</AnchorPane>

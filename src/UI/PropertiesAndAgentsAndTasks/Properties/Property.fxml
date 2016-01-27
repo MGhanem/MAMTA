@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.PropertiesAndAgentsAndTasks.Properties.PropertyController">
+    <stylesheets>
+        <URL value="@Property.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="10.0" layoutY="5.0" text="Property Name:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="10.0" layoutY="40.0" text="Property Type:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="10.0" layoutY="75.0" text="Intial Value:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0" />
+      <Label fx:id="MetericLable" layoutX="10.0" layoutY="110.0" text="Meteric:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="110.0" />
+      <TextField fx:id="NameTF" layoutX="121.0" layoutY="5.0" onKeyReleased="#NameTFKeyPressed" prefHeight="25.0" prefWidth="194.0" AnchorPane.topAnchor="5.0" />
+      <RadioButton fx:id="isBool" layoutX="121.0" layoutY="40.0" mnemonicParsing="false" onAction="#isBoolChoose" onMouseClicked="#RadioBoxPresseed" text="Boolean">
+         <toggleGroup>
+            <ToggleGroup fx:id="RadioButtonGroup1" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="isNum" layoutX="194.0" layoutY="40.0" mnemonicParsing="false" onAction="#isNumChoose" onMouseClicked="#RadioBoxPresseed" text="Number" toggleGroup="$RadioButtonGroup1" />
+      <RadioButton fx:id="isText" layoutX="270.0" layoutY="40.0" mnemonicParsing="false" onAction="#isTextChoose" onMouseClicked="#RadioBoxPresseed" text="Text" toggleGroup="$RadioButtonGroup1" />
+      <CheckBox fx:id="BoolValue" layoutX="121.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: transparent;" visible="false" />
+      <TextField fx:id="ValueTF" layoutX="121.0" layoutY="75.0" onAction="#ValueTFFocusGained" onMouseClicked="#ValueTFFocusGained" prefHeight="25.0" prefWidth="194.0" AnchorPane.topAnchor="75.0" />
+      <TextField fx:id="MetericTF" layoutX="121.0" layoutY="110.0" prefHeight="25.0" prefWidth="194.0" AnchorPane.topAnchor="110.0" />
+      <Label fx:id="WarrName" layoutX="320.0" layoutY="10.0" text="*Must have a name" textFill="RED" visible="false" />
+      <Label fx:id="WarrType" layoutX="320.0" layoutY="40.0" text="*Must have a type" textFill="RED" visible="false" />
+      <Label fx:id="WarrValue" layoutX="320.0" layoutY="80.0" text="this is not a number" textFill="RED" visible="false" />
+      <Button fx:id="OKButton" layoutX="309.0" layoutY="145.0" mnemonicParsing="false" onAction="#OKButtonClicked" prefHeight="35.0" prefWidth="110.0" text="Add Property" />
+      <Label fx:id="savedBack" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="149.0" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: #00BBBBC9;" text="S a v e d" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
